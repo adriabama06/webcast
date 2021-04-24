@@ -1,0 +1,260 @@
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.3); 
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgb(0, 140, 255);
+    -webkit-box-shadow: inset 0px 0px 1px rgba(0, 0, 0);
+}
+::-webkit-scrollbar-thumb:hover {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgb(0, 150, 224);
+    -webkit-box-shadow: inset 0px 0px 3px rgba(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgb(48, 162, 255);
+}
+
+body {
+    padding: 8px 8px 8px 8px;
+    font-family: 'Roboto Mono', monospace;
+    display: block;
+    background-color: rgb(0, 0, 0);
+}
+
+p {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+
+h1 {
+    text-decoration: none;
+    font-size: 45px;
+    color: white;
+}
+
+h2 {
+    text-decoration: none;
+    font-size: 35px;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    color: white;
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+.load {
+    margin: 10px 5px 20px 5px; /* ARRIBApx DERECHApx ABAJOpx IZQUIERDApx */
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    outline: none;
+}
+.load:hover {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: #3e8e41;
+    box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.13);
+}
+.load:active {
+    -webkit-transition-duration: 0.1s; /* Safari */
+    transition-duration: 0.1s;
+    box-shadow: 0px 0px 2px 5px rgba(255, 255, 255, 1);
+}
+
+.delete {
+    margin: 10px 25px 20px 20px; /* ARRIBApx DERECHApx ABAJOpx IZQUIERDApx */
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: #ff0000;
+    border: none;
+    color: white;
+    padding: 8px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    outline: none;
+}
+.delete:hover {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: #9b0000;
+    box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.13);
+}
+.delete:active {
+    -webkit-transition-duration: 0.1s; /* Safari */
+    transition-duration: 0.1s;
+    box-shadow: 0px 0px 2px 5px rgba(255, 255, 255, 1);
+}
+
+.player {
+    margin: 10px 25px 20px 20px; /* ARRIBApx DERECHApx ABAJOpx IZQUIERDApx */
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: #e5ff00;
+    border: none;
+    color: black;
+    padding: 20px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
+.player:hover {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: #b8cc00;
+    box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.13);
+}
+.player:active {
+    -webkit-transition-duration: 0.1s; /* Safari */
+    transition-duration: 0.1s;
+    box-shadow: 0px 0px 2px 5px rgba(255, 255, 255, 0.2);
+}
+
+.player2 {
+    margin: 10px 25px 20px 20px; /* ARRIBApx DERECHApx ABAJOpx IZQUIERDApx */
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: #ff0000;
+    border: none;
+    color: black;
+    padding: 20px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
+.player2:hover {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: #b60000;
+    box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.13);
+}
+.player2:active {
+    -webkit-transition-duration: 0.1s; /* Safari */
+    transition-duration: 0.1s;
+    box-shadow: 0px 0px 2px 5px rgba(255, 255, 255, 0.2);
+}
+
+.input1[type="number"] {
+    width: 120px;
+    border: 2px solid #ccc;
+    font-size: 12px;
+    background-color: white;
+    padding: 12px 20px 12px 20px;
+}
+
+label {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    display: inline-block;
+    background-color: rgb(0, 80, 255);
+    color: white;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+label:hover {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    display: inline-block;
+    background-color: rgb(0, 52, 163);
+    color: white;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.index-arriba {
+    position: static;
+    text-align: center;
+    align-items: center;
+    padding: 50px 100px 50px 100px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6), 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.index-izquierda {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    box-shadow: 0 0 5px rgb(202, 0, 0), 0 0 10px rgb(202, 0, 0);
+    float: left;
+    width: 43%;
+    text-align: left;
+    padding: 20px 20px 20px 20px;
+    background-color: rgb(202, 0, 0);
+}
+
+.index-izquierda:hover {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    box-shadow: 0 0 20px rgba(202, 0, 0, 0.5), 0 0 40px rgba(202, 0, 0, 0.5);
+    float: left;
+    width: 43%;
+    text-align: left;
+    padding: 20px 20px 20px 20px;
+    background-color: rgb(218, 0, 0);
+    cursor: pointer;
+}
+
+.index-derecha {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    box-shadow: 0 0 5px rgb(202, 188, 0), 0 0 10px rgb(202, 188, 0);
+    float: right;
+    width: 43%;
+    text-align: right;
+    padding: 20px 20px 20px 20px;
+    background-color: rgb(202, 188, 0);
+}
+
+.index-derecha:hover {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    box-shadow: 0 0 20px rgba(202, 188, 0, 0.5), 0 0 40px rgba(202, 188, 0, 0.5);
+    float: right;
+    width: 43%;
+    text-align: right;
+    padding: 20px 20px 20px 20px;
+    background-color: rgb(218, 203, 0);
+    cursor: pointer;
+}
+
+.uploadarchivos {
+    padding: 0px 0px 100px 150px;
+}

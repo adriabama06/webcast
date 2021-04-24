@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css.css">
+    <title>.</title>
+</head>
+<body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" >
+    async function sleep(ms) {
+        return new Promise((resolve) => {
+            setTimeout(resolve, ms);
+        });
+    };
+
+    var socket = io();
+
+    socket.emit('client/newclient', 'index');
+
+    socket.on('server/ok', async (chromecast) => {
+        console.log(chromecast);
+        if(chromecast.have == false) {
+            document.getElementById('chrome-info').innerText = 'No se detecto ningun ChromeCast';
+        } else {
+            document.getElementById('chrome-info').innerText = 'Se detecto el ChromeCast';
+        };
+        document.getElementById('chrome-name').innerText = `Nombre: ${chromecast.name}`;
+        document.getElementById('chrome-ip').innerText = `IP: ${chromecast.ip}`;
+    });
+
+
+    async function main() {
+        await sleep(1000);
+        document.title = "Hi !";
+        /*if(window.location.search == '?beta') {
+            fetch('/api/v0/chromecast')
+            .then(response => response.json())
+            .then(data => console.log(data.ip));
+            var fet = await fetch('/api/v0/chromecast');
+        };*/
+    };
+
+    window.onload = main();
+
+    </script>
+    <div class="index-arriba">
+        <h1 id="chrome-info"></h1>
+        <p id="chrome-name" style="display: inline; padding: 4px 50px 4px 50px;">Nombre: ?</p><p id="chrome-ip" style="display: inline; padding: 4px 50px 4px 50px;">IP: ?</p>
+    </div>
+    <div onclick="window.location.href = '/admin'" class="index-izquierda">
+        <h2>Administracion</h2>
+        <p>Controla el video que se esta reproduciendo</p>
+    </div>
+    <div onclick="window.location.href = '/files'" class="index-derecha">
+        <h2>Archivos</h2>
+        <p>Administra los archivos cargados</p>
+    </div>
+</body>
+</html>
