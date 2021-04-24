@@ -37,7 +37,7 @@ module.exports = class extends EventEmitter {
         this.emit('start', this.frames);
         // Nvidia
         // ffmpeg -i ${input} -map 0:0 -map 0:1 -acodec mp3 -vcodec h264_nvenc -profile high -preset medium ${output}
-        child_process.exec(`ffmpeg -i ${input} -map 0:0 -map 0:1 -acodec mp3 -vcodec h264_nvenc -profile high -preset medium ${output}`).stderr.on('data', async (data) => {
+        child_process.exec(`ffmpeg -i ${input} -map 0:0 -map 0:1 -acodec mp3 -vcodec libx264 -profile high -preset medium ${output}`).stderr.on('data', async (data) => {
             const args = data.toString().split('=');
             if(!args || !args.length) {
                 return;
