@@ -5,7 +5,6 @@ async function sleep(ms) {
 };
 
 const ChromecastAPI = require('chromecast-api');
-const ffmpeg = require('ffmpeg-static');
 
 var __video;
 
@@ -40,11 +39,12 @@ const path = require('path');
 const fs = require('fs');
 const formidable = require('formidable');
 const transform = require('./transform.js');
+const config = require('./config.json');
 
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || config.port;
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -148,7 +148,7 @@ io.on('connection', async (socket) => {
 
     socket.on('client/loadvideo', async (loadvideo) => {
         __video = loadvideo;
-        var mediaURL = 'http://mysql-opnetwork.ddns.net:3002/video';
+        var mediaURL = `${config.publicip}:${config.port}/video`;
         __chromecast.play(mediaURL, async (err) => {
             if (!err) console.log('Playing in your chromecast');
             await sleep(1000);
